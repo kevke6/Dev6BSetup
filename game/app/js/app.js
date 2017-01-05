@@ -6,7 +6,8 @@ angular.module('app', ['ngRoute', 'controller'])
         templateUrl: 'templates/test.html'
     })*/
 	.when('/mission', {
-		templateUrl: 'templates/MissionStartup.html'
+		templateUrl: 'templates/MissionStartup.html',
+		controller : 'MController'
 	})
 	.when('/multiplayer', {
 		templateUrl: 'templates/MultiplayerStartup.html',

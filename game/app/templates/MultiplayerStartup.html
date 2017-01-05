@@ -33,7 +33,7 @@
             <th>Title</th><th>Description</th><th>Added</th><th>Remove</th>
         </tr>
         <tr ng-repeat="character in characters | filter: query">
-            <td>{{ character.Health }}</td><td>{{ character.Health }}</td><td>{{ character.Health }}</td><td><button class="btn btn-danger" ng-click="removeData(blog.id)">x</button></td>
+            <td>{{ character.Character_Name }}</td><td>{{ character.Health }}</td><td>{{ character.Health }}</td><td><button class="btn btn-danger" ng-click="removeData(blog.id)">x</button></td>
         </tr>
     </table>
 
