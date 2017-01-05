@@ -9,7 +9,7 @@ angular.module('app', ['ngRoute', 'controller'])
 		templateUrl: 'templates/MissionStartup.html'
 	})
 	.when('/multiplayer', {
-		templateUrl: 'templates/MultiplayerStartup.html',
+		templateUrl: 'templates/Multiplayer.html',
 		controller: 'MPController'
 	})
 	.otherwise({

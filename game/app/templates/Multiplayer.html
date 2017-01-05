@@ -1,0 +1,27 @@
+<div class="container">
+
+    <h1>{{ title }}</h1>
+
+    <br>
+    <input type="search" ng-model="query" placeholder="Search Player" class="form-control">
+    <br>
+    <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Health</th>
+            <th>Defense</th>
+            <th>Power</th>
+            <th>Level</th>
+            <th>Battle</th>
+        </tr>
+        <tr ng-repeat="character in characters | filter: query">
+            <td>{{ character.Character_Name }}</td>
+            <td>{{ character.Health }}</td>
+            <td>{{ character.Def }}</td>
+            <td>{{ character.Att }}</td>
+            <td>{{ character.LVL }}</td>
+            <td><button class="btn btn-danger" ng-click="updateData(character.Character_Name)">Attack</button></td>
+        </tr>
+    </table>
+
+</div>
