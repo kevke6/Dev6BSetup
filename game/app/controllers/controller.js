@@ -55,9 +55,17 @@ angular.module('controller',[])
             $('#blogForm').slideToggle();
         }
 
-        $http.get('./js/popData.php')
+        $http.get('./js/popData.php',{params:{statement : "select * from `Character` where `Character_Name` != 'ItsReaper'"}})
             .success(function(data) {
                 $scope.characters = data;
+            })
+            .error(function(err) {
+                $log.error(err);
+            })
+
+        $http.get('./js/popData.php',{params:{statement : "select * from `Character` where `Character_Name` = 'ItsReaper'"}})
+            .success(function(data) {
+                $scope.user = data;
             })
             .error(function(err) {
                 $log.error(err);
