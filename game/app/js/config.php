@@ -28,6 +28,11 @@ class DB {
         return $this->data;
     }
 
+    public function qryUpdate($sql){
+        $this->con->query($sql);
+        $this->con->close();
+    }
+
     public function qryPop() {
         $sql = "SELECT * FROM `Character`";
         $qry = $this->con->query($sql);
@@ -41,7 +46,7 @@ class DB {
         $this->con->close();
     }
 
-    public function qryFire($sql=null) {
+    public function qryFire($sql=null, $usr) {
         if($sql == null) {
             $this->qryPop();
         } else {
