@@ -88,37 +88,41 @@ angular.module('controller',[])
             user = $scope.user[0];
             battle_dif = user.Att - $char.Def;
             random = Math.random();
-            user.Stamina--;
-            if(user.Att > $char.Def) {
-                user.exp =+ 5;
-                if(user.exp == 50){
-                    user.LVL++
-                }
-                //hier moet de update komen
-                alert("gewonnen");
-            } else {
-                if(random > 0.4 && battle_dif >= 0) {
-                    user.exp =+ 6;
-                    if(user.exp == 50){
-                        user.LVL++
-                    }
-                    //hier moet de update komen
-                    alert("gewonnen");
-                } else if(random > 0.8 && battle_dif < 0) {
-                    user.exp = +8;
-                    if (user.exp == 50) {
+            if (user.Stamina > 0) {
+                user.Stamina--;
+                if (user.Att > $char.Def) {
+                    user.EXP =+ 5;
+                    if (user.EXP == 50) {
                         user.LVL++
                     }
                     //hier moet de update komen
                     alert("gewonnen");
                 } else {
-                    user.exp =+ 1;
-                    if(user.exp == 50){
-                        user.LVL++
+                    if (random > 0.4 && battle_dif >= 0) {
+                        user.EXP =+ 6;
+                        if (user.EXP == 50) {
+                            user.LVL++
+                        }
+                        //hier moet de update komen
+                        alert("gewonnen");
+                    } else if (random > 0.8 && battle_dif < 0) {
+                        user.EXP =+ 8;
+                        if (user.EXP == 50) {
+                            user.LVL++
+                        }
+                        //hier moet de update komen
+                        alert("gewonnen");
+                    } else {
+                        user.EXP++;
+                        if (user.EXP == 50) {
+                            user.LVL++
+                        }
+                        // hier moet de update komen
+                        alert("verloren");
                     }
-                    // hier moet de update komen
-                    alert("verloren");
                 }
+            } else {
+                alert("u heeft niet genoeg stamina om aan te vallen");
             }
         }
 
