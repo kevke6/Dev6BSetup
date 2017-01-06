@@ -22,6 +22,10 @@
     </table>
 
     <br>
+    <h3 ng-bind="msg"></h3>
+    <br>
+
+    <br>
     <input type="search" ng-model="query" placeholder="Search Player" class="form-control">
     <br>
     <table class="table multiplayer-table">
@@ -39,7 +43,7 @@
             <td>{{ character.Def }}</td>
             <td>{{ character.Att }}</td>
             <td>{{ character.LVL }}</td>
-            <td><button class="btn btn-danger" ng-click="updateData(character, data)">Attack</button></td>
+            <td><button class="btn btn-danger" ng-click="updateData(character)">Attack</button></td>
         </tr>
     </table>
 

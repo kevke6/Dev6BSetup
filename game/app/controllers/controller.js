@@ -92,7 +92,7 @@ angular.module('controller',[])
                         sta = parseInt(user.Stamina) - parseInt($mission.Stamina_Costs);
                         att = parseInt(parseInt(user.Att) + (Math.random()*10) + 1);
                         def = parseInt(parseInt(user.Def) + (Math.random()*10) + 1);
-                        $scope.msg = ("Congratulations you are lvl up and your stats have been increased");
+                        scope.msg = ("Congratulations you are lvl up and your stats have$ been increased");
                         stmt += "`LVL` = " + lvl +
                             ", `EXP` =" + exp +
                             ", `Stamina` =" + sta +
@@ -124,6 +124,9 @@ angular.module('controller',[])
             $('#blogForm').slideToggle();
         }
 
+        $http.get('./js/pushData.php', {params:{statement:"UPDATE `Character` set `Stamina` = 10 , `LastLogin` = DATE(NOW()) " +
+        "where `LastLogin` != DATE(NOW()) and `Character_Name` = 'ItsReaper'"}})
+
         $http.get('./js/popData.php',{params:{statement : "select * from `Character` where `Character_Name` != 'ItsReaper'"}})
             .success(function(data) {
                 $scope.characters = data;
@@ -140,67 +143,118 @@ angular.module('controller',[])
                 $log.error(err);
             })
 
-        $scope.pushData = function($params) {
-            $http.post('./js/pushData.php',{'title':$params.title, 'description':$params.description})
-                .success(function(data) {
-                    $scope.characters = data;
-                })
-                .error(function(err) {
-                    $log.error(err);
-                })
-        }
 
         $scope.updateData = function($char) {
             user = $scope.user[0];
             battle_dif = user.Att - $char.Def;
             random = Math.random();
+            stmt = "Update `Character` set ";
             if (user.Stamina > 0) {
                 user.Stamina--;
-                if (user.EXP >= 100) {
-                    user.LVL++;
-                    user.EXP = 0;
-                 }
                 if (user.Att > $char.Def) {
-                    user.EXP = parseInt(user.EXP) + 5;
-                    if (user.EXP == 50) {
-                        user.LVL++
+                    $scope.msg = ("Congratulations you have successfully defeated: " + $char.Character_Name);
+                    user.EXP = parseInt(user.EXP) + 10;
+                    if (user.EXP >= 100) {
+                        lvl = parseInt(user.LVL) + 1;
+                        hp = parseInt(user.Health) + 50;
+                        exp = (parseInt(user.EXP) + parseInt(10)) - 100;
+                        att = parseInt(parseInt(user.Att) + (Math.random() * 10) + 1);
+                        def = parseInt(parseInt(user.Def) + (Math.random() * 10) + 1);
+                        $scope.msg = ("Congratulations you are lvl up and your stats have been increased");
+                        stmt += "`LVL` = " + lvl +
+                            ", `EXP` =" + exp +
+                            ", `Stamina` =" + user.Stamina +
+                            ", `Att` =" + att +
+                            ", `Def` =" + def +
+                            " ,`Health` =" + hp +
+                            " where Character_Name = '" + user.Character_Name + "'";
+                    } else {
+                        stmt += "`EXP` = " + user.EXP +
+                            " ,`Stamina` = " + user.Stamina +
+                            " where Character_Name = '" + user.Character_Name + "'";
                     }
-                    //hier moet de update komen
-                    alert("gewonnen");
                 } else {
                     if (random > 0.4 && battle_dif >= 0) {
-                        user.EXP = parseInt(user.EXP)+ 6;
-                        //hier moet de update komen
-                        alert("gewonnen");
+                        $scope.msg = ("Congratulations you have successfully defeated: " + $char.Character_Name);
+                        user.EXP = parseInt(user.EXP)+ 30;
+                        if (user.EXP >= 100) {
+                            lvl = parseInt(user.LVL) + 1;
+                            hp = parseInt(user.Health) + 50;
+                            exp = (parseInt(user.EXP) + parseInt(30)) - 100;
+                            att = parseInt(parseInt(user.Att) + (Math.random() * 10) + 1);
+                            def = parseInt(parseInt(user.Def) + (Math.random() * 10) + 1);
+                            $scope.msg = ("Congratulations you are lvl up and your stats have been increased");
+                            stmt += "`LVL` = " + lvl +
+                                ", `EXP` =" + exp +
+                                ", `Stamina` =" + user.Stamina +
+                                ", `Att` =" + att +
+                                ", `Def` =" + def +
+                                " ,`Health` =" + hp +
+                                " where Character_Name = '" + user.Character_Name + "'";
+                        } else {
+                            stmt += "`EXP` = " + user.EXP +
+                                " ,`Stamina` = " + user.Stamina +
+                                " where Character_Name = '" + user.Character_Name + "'";
+                        }
                     } else if (random > 0.8 && battle_dif < 0) {
-                        user.EXP = parseInt(user.EXP) + 8;
-                        //hier moet de update komen
-                        alert("gewonnen");
+                        user.EXP = parseInt(user.EXP) + 75;
+                        $scope.msg = ("Congratulations you have successfully defeated: " + $char.Character_Name);
+                        if (user.EXP >= 100) {
+                            lvl = parseInt(user.LVL) + 1;
+                            hp = parseInt(user.Health) + 50;
+                            exp = (parseInt(user.EXP) + parseInt(75)) - 100;
+                            att = parseInt(parseInt(user.Att) + (Math.random() * 10) + 1);
+                            def = parseInt(parseInt(user.Def) + (Math.random() * 10) + 1);
+                            $scope.msg = ("Congratulations you are lvl up and your stats have been increased");
+                            stmt += "`LVL` = " + lvl +
+                                ", `EXP` =" + exp +
+                                ", `Stamina` =" + user.Stamina +
+                                ", `Att` =" + att +
+                                ", `Def` =" + def +
+                                " ,`Health` =" + hp +
+                                " where Character_Name = '" + user.Character_Name + "'";
+                        } else {
+                            stmt += "`EXP` = " + user.EXP +
+                                " ,`Stamina` = " + user.Stamina +
+                                " where Character_Name = '" + user.Character_Name + "'";
+                        }
                     } else {
-                        user.EXP++;
-                        // hier moet de update komen
-                        alert("verloren");
+                        $scope.msg = ("To bad, you failed to defeat: " + $char.Character_Name + ". You gained 5 Experience for trying")
+                        user.EXP = parseInt(user.EXP) + 5;
+                        if ((parseInt(user.EXP) + 5) >= 100) {
+                            lvl = parseInt(user.LVL) + 1;
+                            hp = parseInt(user.Health) + 50;
+                            exp = (5 + parseInt(user.EXP)) - 100;
+                            sta = parseInt(user.Stamina) - parseInt(1);
+                            att = parseInt(parseInt(user.Att) + (Math.random()*10) + 1);
+                            def = parseInt(parseInt(user.Def) + (Math.random()*10) + 1);
+                            scope.msg = ("Congratulations you are lvl up and your stats have$ been increased");
+                            stmt += "`LVL` = " + lvl +
+                                ", `EXP` =" + exp +
+                                ", `Stamina` =" + sta +
+                                ", `Att` =" + att +
+                                ", `Def` =" + def +
+                                " ,`Health` =" + hp +
+                                " where Character_Name = '" + user.Character_Name + "'";
+                        } else {
+                            stmt += "`EXP` = " + user.EXP +
+                                " ,`Stamina` = " + user.Stamina +
+                                " where Character_Name = '" + user.Character_Name + "'";
+                        }
                     }
                 }
             } else {
-                alert("u heeft niet genoeg stamina om aan te vallen");
-            }
-        }
-
-        $scope.removeData = function($params) {
-            var cnfrm = confirm("Are you sure to delete?");
-            if(cnfrm) {
-                $http.post('./js/removeData.php', {'id':$params})
-                    .success(function(data) {
-                        $scope.characters = data;
-                    })
-                    .error(function(err) {
-                        $log.error(err);
-                    })
-            } else {
-                //
+                alert("Can't attack, Stamina to low try again tomorrow");
             }
 
+            $http.get('./js/pushData.php', {params:{statement: stmt}});
+            $http.get('./js/popData.php',{params:{statement : "select * from `Character` where `Character_Name` = '" + user.Character_Name + "'"}})
+                .success(function(data) {
+                    $scope.user = data;
+                })
+                .error(function(err) {
+                    $log.error(err);
+                })
         }
 
     }])
