@@ -14,7 +14,10 @@ angular.module('controller',[])
                 $log.error(err);
             })
 
-        $http.get('./js/popData.php',{params:{statement : "SELECT * FROM `Mission`"}})
+        $http.get('./js/popData.php',{params:{statement : "select * from `Mission` " +
+                                                            "where `LVL_Low` <= (select `LVL` from `Character` where `Character_Name` = 'TheHero') " +
+                                                            "and LVL_High >= (select `LVL` from `Character` where `Character_Name` = 'TheHero') " +
+                                                            "order by field(`Difficulty`,'Easy', 'Medium', 'Hard')"}})
             .success(function(data) {
                 $scope.missions = data;
             })
@@ -32,7 +35,7 @@ angular.module('controller',[])
                 })
         }
 
-        $scope.removeData = function($params) {
+       /* $scope.removeData = function($params) {
             var cnfrm = confirm("Are you sure to delete?");
             if(cnfrm) {
                 $http.post('./js/removeData.php', {'id':$params})
@@ -46,7 +49,7 @@ angular.module('controller',[])
                 //
             }
 
-        }
+        }*/
 
     }])
     .controller('MPController', ['$scope', '$http', '$log', function($scope, $http, $log) {

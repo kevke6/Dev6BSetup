@@ -29,8 +29,19 @@
     <input type="search" ng-model="query" placeholder="Search Blog" class="form-control">
     <br>-->
     <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Health</th>
+            <th>Attack</th>
+            <th>Defense</th>
+            <th>Stamina</th>
+        </tr>
         <tr ng-repeat="usr in user">
-            <td>{{usr.Character_Name}}</td><td>{{usr.Health}}</td>
+            <td>{{usr.Character_Name}}</td>
+            <td>{{usr.Health}}</td>
+            <td>{{usr.Att}}</td>
+            <td>{{usr.Def}}</td>
+            <td>{{usr.Stamina}}</td>
         </tr>
         <tr>
 
@@ -42,8 +53,12 @@
             <th>Mission</th><th>Description</th><th>EXP Reward</th><th>Stamine Cost</th><th>Difficulty</th><th></th>
         </tr>
         <tr ng-repeat="mission in missions | filter: query">
-            <td>{{ mission.Name }}</td><td>{{ mission.Description }}</td><td>{{ mission.EXP_Reward }}</td>
-            <td>{{ mission.Stamina_Costs }}</td><td>{{mission.Difficulty}}</td><td><button class="btn btn-danger" ng-click="removeData(blog.id)">Accept Mission</button></td>
+            <td class="table-striped-mn">{{ mission.Name }}</td>
+            <td class="table-striped-md">{{ mission.Description }}</td>
+            <td>{{ mission.EXP_Reward }}</td>
+            <td>{{ mission.Stamina_Costs }}</td>
+            <td>{{mission.Difficulty}}</td>
+            <td><button class="btn btn-danger" ng-click="removeData(blog.id)">Accept Mission</button></td>
         </tr>
     </table>
 
