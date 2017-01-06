@@ -2261,6 +2261,16 @@ caption {
 th {
   text-align: center;
 }
+.table-striped {
+  text-align: center;
+}
+.table-striped-mn{
+  text-align: left;
+  width: 15%;
+}
+.table-striped-md{
+  text-align: left;
+}
 .multiplayer-table td {
   text-align: center;
 }
