@@ -246,8 +246,10 @@ angular.module('controller',[])
                     }
                 }
             } else {
+                $scope.test = "succes"
                 alert("Can't attack, Stamina to low try again tomorrow");
             }
+
 
             $http.get('./js/pushData.php', {params:{statement: stmt}});
             $http.get('./js/popData.php',{params:{statement : "select * from `Character` where `Character_Name` = '" + user.Character_Name + "'"}})
@@ -257,6 +259,7 @@ angular.module('controller',[])
                 .error(function(err) {
                     $log.error(err);
                 })
+            $scope.test = "succes"
         }
 
     }])

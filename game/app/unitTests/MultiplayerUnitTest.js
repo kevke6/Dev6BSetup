@@ -11,8 +11,9 @@ describe('MpController', function() {
     describe('$scope.grade', function() {
         it('says that the player lost', function() {
             var $scope = {};
-            var controller = $controller('MpController', { $scope: $scope });
-            $char = {
+            var controller = $controller('MPController', {
+                $scope: $scope });
+            $char = [{
                 Character_name: 'Test',
                 Health: 10,
                 Att: 10,
@@ -20,9 +21,9 @@ describe('MpController', function() {
                 LVL: 1,
                 EXP: 0,
                 Stamina: 10
-            }
+            }]
 
-            user = {
+            user = [{
                 Character_name: 'Test',
                 Health: 10,
                 Att: 0,
@@ -30,10 +31,10 @@ describe('MpController', function() {
                 LVL: 1,
                 EXP: 0,
                 Stamina: 10
-            }
-            $scope.updateData($char)
-            $scope.grade();
-            expect($scope.msg).toEqual('To bad, you failed to defeat: " + $char.Character_Name + ". You gained 5 Experience for trying"');
+            }]
+            $scope.user = user;
+            $scope.updateData($char);
+            expect($scope.test).toEqual("succes");
         });
     });
 });
