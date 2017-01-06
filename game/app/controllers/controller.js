@@ -86,10 +86,32 @@ angular.module('controller',[])
 
         $scope.updateData = function($char) {
             user = $scope.user[0];
-            if(user.Att >= $char.Def) {
+            if(user.Att > $char.Def) {
+                user.Stamina--;
+                user.exp =+ 5;
+                if(user.exp == 50){
+                    user.LVL++
+                }
+                //hier moet de update komen
                 alert("gewonnen");
             } else {
-                alert("verloren");
+                random = Math.random();
+                if(random > 0.4) {
+                    user.exp =+ 6;
+                    if(user.exp == 50){
+                        user.LVL++
+                    }
+                    //hier moet de update komen
+                    alert("gewonnen");
+                } else{
+                    user.Stamina--;
+                    user.exp =+ 1;
+                    if(user.exp == 50){
+                        user.LVL++
+                    }
+                    // hier moet de update komen
+                    alert("verloren");
+                }
             }
         }
 
