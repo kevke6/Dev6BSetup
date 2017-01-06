@@ -86,8 +86,10 @@ angular.module('controller',[])
 
         $scope.updateData = function($char) {
             user = $scope.user[0];
+            battle_dif = user.Att - $char.Def;
+            random = Math.random();
+            user.Stamina--;
             if(user.Att > $char.Def) {
-                user.Stamina--;
                 user.exp =+ 5;
                 if(user.exp == 50){
                     user.LVL++
@@ -95,16 +97,21 @@ angular.module('controller',[])
                 //hier moet de update komen
                 alert("gewonnen");
             } else {
-                random = Math.random();
-                if(random > 0.4) {
+                if(random > 0.4 && battle_dif >= 0) {
                     user.exp =+ 6;
                     if(user.exp == 50){
                         user.LVL++
                     }
                     //hier moet de update komen
                     alert("gewonnen");
-                } else{
-                    user.Stamina--;
+                } else if(random > 0.8 && battle_dif < 0) {
+                    user.exp = +8;
+                    if (user.exp == 50) {
+                        user.LVL++
+                    }
+                    //hier moet de update komen
+                    alert("gewonnen");
+                } else {
                     user.exp =+ 1;
                     if(user.exp == 50){
                         user.LVL++
