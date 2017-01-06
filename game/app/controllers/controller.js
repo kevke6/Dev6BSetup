@@ -32,6 +32,7 @@ angular.module('controller',[])
             user = $scope.user[0];
             if ((user.Stamina - $mission.Stamina_Costs) < 0) {
                 alert("Can't start mission, Stamina to low try again tomorrow");
+                $scope.test = "Succes";
                 return;
             } else {
                 difficulty = $mission.Difficulty;
@@ -115,6 +116,7 @@ angular.module('controller',[])
                 .error(function(err) {
                     $log.error(err);
                 })
+            $scope.test = "Succes";
         }
 
     }])
