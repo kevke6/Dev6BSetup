@@ -60,7 +60,7 @@
       <DataType>int(11)|0</DataType>
       <DefaultExpression>&apos;10&apos;</DefaultExpression>
     </column>
-    <column id="17" parent="5" name="Date">
+    <column id="17" parent="5" name="LastLogin">
       <Position>8</Position>
       <DataType>date|0</DataType>
     </column>

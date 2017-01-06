@@ -34,6 +34,7 @@
             <th>Health</th>
             <th>Attack</th>
             <th>Defense</th>
+            <th>Exp</th>
             <th>Stamina</th>
         </tr>
         <tr ng-repeat="usr in user">
@@ -41,12 +42,15 @@
             <td>{{usr.Health}}</td>
             <td>{{usr.Att}}</td>
             <td>{{usr.Def}}</td>
+            <td>{{usr.EXP}}</td>
             <td>{{usr.Stamina}}</td>
         </tr>
         <tr>
 
         </tr>
     </table>
+    <br>
+    <h3 ng-bind="msg"></h3>
     <br>
     <table class="table table-striped">
         <tr>
@@ -58,8 +62,7 @@
             <td>{{ mission.EXP_Reward }}</td>
             <td>{{ mission.Stamina_Costs }}</td>
             <td>{{mission.Difficulty}}</td>
-            <td><button class="btn btn-danger" ng-click="removeData(blog.id)">Accept Mission</button></td>
+            <td><button class="btn btn-mission" ng-click="updateData(mission, data)">Accept Mission</button></td>
         </tr>
     </table>
-
 </div>
