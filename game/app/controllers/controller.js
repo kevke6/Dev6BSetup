@@ -64,16 +64,18 @@ angular.module('controller',[])
                     $scope.msg = ("Congratulations you have successfully completed the mission: " + $mission.Name);
                     if ((parseInt(user.EXP) + parseInt($mission.EXP_Reward)) >= 100) {
                         lvl = parseInt(user.LVL) + 1;
+                        hp = parseInt(user.Health) + 50;
                         exp = (parseInt(user.EXP) +parseInt($mission.EXP_Reward)) - 100;
                         sta = parseInt(user.Stamina) - parseInt($mission.Stamina_Costs);
-                        att = parseInt(user.Att) + (Math.random()*10 + 1);
-                        def = parseInt(user.Def) + (Math.random()*10 + 1);
+                        att = parseInt(parseInt(user.Att) + (Math.random()*10) + 1);
+                        def = parseInt(parseInt(user.Def) + (Math.random()*10) + 1);
                         $scope.msg = ("Congratulations you are lvl up and your stats have been increased");
-                        stmt = " `LVL` = " + lvl +
+                        stmt += " `LVL` = " + lvl +
                                 " ,`EXP` =" + exp +
                                 " ,`Stamina` =" + sta +
                                 " ,`Att` =" + att +
                                 " ,`Def` =" + def +
+                                " ,`Health` =" + hp +
                                 " where Character_Name = '" + user.Character_Name + "'";
                     }else{
                         exp = parseInt(user.EXP) + parseInt($mission.EXP_Reward);
@@ -85,16 +87,18 @@ angular.module('controller',[])
                     $scope.msg = ("To bad, you failed to complete: " + $mission.Name + ". You are granted 5 Experience for trying");
                     if ((parseInt(user.EXP) + 5) >= 100) {
                         lvl = parseInt(user.LVL) + 1;
+                        hp = parseInt(user.Health) + 50;
                         exp = (5 + parseInt(user.EXP)) - 100;
                         sta = parseInt(user.Stamina) - parseInt($mission.Stamina_Costs);
-                        att = parseInt(user.Att) + (Math.random()*10 + 1);
-                        def = parseInt(user.Def) + (Math.random()*10 + 1);
+                        att = parseInt(parseInt(user.Att) + (Math.random()*10) + 1);
+                        def = parseInt(parseInt(user.Def) + (Math.random()*10) + 1);
                         $scope.msg = ("Congratulations you are lvl up and your stats have been increased");
-                        stmt = "`LVL` = " + lvl +
+                        stmt += "`LVL` = " + lvl +
                             ", `EXP` =" + exp +
                             ", `Stamina` =" + sta +
                             ", `Att` =" + att +
                             ", `Def` =" + def +
+                            " ,`Health` =" + hp +
                             " where Character_Name = '" + user.Character_Name + "'";
                     }else{
                         exp = parseInt(user.EXP) + 5;

@@ -77,23 +77,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controller.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/app/controllers/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+            <state relative-caret-position="510">
+              <caret line="100" column="31" lean-forward="false" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
               <folding>
-                <element signature="e#163#216#0" expanded="false" />
                 <element signature="e#265#475#0" expanded="false" />
-                <element signature="e#725#773#0" expanded="false" />
-                <element signature="e#821#1278#0" expanded="false" />
-                <element signature="e#1317#1372#0" expanded="false" />
-                <element signature="e#1407#1455#0" expanded="false" />
-                <element signature="e#1505#5920#0" expanded="false" />
-                <element signature="e#1848#2624#0" expanded="false" />
-                <element signature="e#5853#5909#0" expanded="false" />
-                <marker date="1483724529756" expanded="false" signature="1603:1723" ph="{...}" />
+                <element signature="e#6113#6169#0" expanded="false" />
+                <marker date="1483728043064" expanded="false" signature="1603:1723" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sql8151931.Character" pinned="false" current-in-tab="true">
+        <entry file="dbDummy://dbtable:/a26370fb/1a036860-662d-419e-a624-cb19d2e7b804/sql8151931.Character">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -124,8 +132,8 @@
             <state relative-caret-position="51">
               <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="30" />
               <folding>
-                <marker date="1483718391093" expanded="true" signature="941:956" ph="SELECT * FRO... Mission" />
-                <marker date="1483718391093" expanded="true" signature="941:966" ph="SELECT * FRO... Character" />
+                <marker date="1483726846120" expanded="true" signature="941:956" ph="SELECT * FRO... Mission" />
+                <marker date="1483726846120" expanded="true" signature="941:966" ph="SELECT * FRO... Character" />
               </folding>
             </state>
           </provider>
@@ -144,11 +152,10 @@
       <file leaf-file-name="MissionStartup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/app/templates/MissionStartup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="52" column="27" lean-forward="false" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+            <state relative-caret-position="289">
+              <caret line="42" column="35" lean-forward="true" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
               <folding>
                 <element signature="e#55#1098#0" expanded="false" />
-                <element signature="n#table#0;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#table#1;n#div#0;n#!!top" expanded="false" />
               </folding>
             </state>
@@ -545,7 +552,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46344000" />
+    <option name="totallyTimeSpent" value="47559000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="-8" width="1858" height="1096" extended-state="6" />
@@ -582,7 +589,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -670,7 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -678,7 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="29620" lean-forward="false" selection-start-line="4" selection-start-column="29620" selection-end-line="4" selection-end-column="29620" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -687,7 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -695,7 +699,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -708,7 +711,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -738,8 +740,8 @@
         <state relative-caret-position="51">
           <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="30" />
           <folding>
-            <marker date="1483718391093" expanded="true" signature="941:956" ph="SELECT * FRO... Mission" />
-            <marker date="1483718391093" expanded="true" signature="941:966" ph="SELECT * FRO... Character" />
+            <marker date="1483726846120" expanded="true" signature="941:956" ph="SELECT * FRO... Mission" />
+            <marker date="1483726846120" expanded="true" signature="941:966" ph="SELECT * FRO... Character" />
           </folding>
         </state>
       </provider>
@@ -778,12 +780,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game/app/templates/MissionStartup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="52" column="27" lean-forward="false" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+        <state relative-caret-position="289">
+          <caret line="42" column="35" lean-forward="true" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
           <folding>
             <element signature="e#55#1098#0" expanded="false" />
-            <element signature="n#table#0;n#div#0;n#!!top" expanded="false" />
             <element signature="n#table#1;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/app/controllers/controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="100" column="31" lean-forward="false" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
+          <folding>
+            <element signature="e#265#475#0" expanded="false" />
+            <element signature="e#6113#6169#0" expanded="false" />
+            <marker date="1483728043064" expanded="false" signature="1603:1723" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -798,25 +811,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/app/controllers/controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding>
-            <element signature="e#163#216#0" expanded="false" />
-            <element signature="e#265#475#0" expanded="false" />
-            <element signature="e#725#773#0" expanded="false" />
-            <element signature="e#821#1278#0" expanded="false" />
-            <element signature="e#1317#1372#0" expanded="false" />
-            <element signature="e#1407#1455#0" expanded="false" />
-            <element signature="e#1505#5920#0" expanded="false" />
-            <element signature="e#1848#2624#0" expanded="false" />
-            <element signature="e#5853#5909#0" expanded="false" />
-            <marker date="1483724529756" expanded="false" signature="1603:1723" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
