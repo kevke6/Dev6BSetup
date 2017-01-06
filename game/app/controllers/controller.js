@@ -90,8 +90,12 @@ angular.module('controller',[])
             random = Math.random();
             if (user.Stamina > 0) {
                 user.Stamina--;
+                if (user.EXP >= 100) {
+                    user.LVL++;
+                    user.EXP = 0;
+                 }
                 if (user.Att > $char.Def) {
-                    user.EXP =+ 5;
+                    user.EXP = parseInt(user.EXP) + 5;
                     if (user.EXP == 50) {
                         user.LVL++
                     }
@@ -99,24 +103,15 @@ angular.module('controller',[])
                     alert("gewonnen");
                 } else {
                     if (random > 0.4 && battle_dif >= 0) {
-                        user.EXP =+ 6;
-                        if (user.EXP == 50) {
-                            user.LVL++
-                        }
+                        user.EXP = parseInt(user.EXP)+ 6;
                         //hier moet de update komen
                         alert("gewonnen");
                     } else if (random > 0.8 && battle_dif < 0) {
-                        user.EXP =+ 8;
-                        if (user.EXP == 50) {
-                            user.LVL++
-                        }
+                        user.EXP = parseInt(user.EXP) + 8;
                         //hier moet de update komen
                         alert("gewonnen");
                     } else {
                         user.EXP++;
-                        if (user.EXP == 50) {
-                            user.LVL++
-                        }
                         // hier moet de update komen
                         alert("verloren");
                     }
