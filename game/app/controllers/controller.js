@@ -81,6 +81,15 @@ angular.module('controller',[])
                 })
         }
 
+        $scope.updateData = function($char) {
+            user = $scope.user[0];
+            if(user.Att >= $char.Def) {
+                alert("gewonnen");
+            } else {
+                alert("verloren");
+            }
+        }
+
         $scope.removeData = function($params) {
             var cnfrm = confirm("Are you sure to delete?");
             if(cnfrm) {

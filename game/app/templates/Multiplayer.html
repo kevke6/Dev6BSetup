@@ -1,5 +1,4 @@
-<div class="container">
-
+<div class="container" ng-model="data">
     <h1>{{ title }}</h1>
     <table class="table multiplayer-table">
         <tr>
@@ -40,7 +39,7 @@
             <td>{{ character.Def }}</td>
             <td>{{ character.Att }}</td>
             <td>{{ character.LVL }}</td>
-            <td><button class="btn btn-danger" ng-click="updateData(character.Character_Name)">Attack</button></td>
+            <td><button class="btn btn-danger" ng-click="updateData(character, data)">Attack</button></td>
         </tr>
     </table>
 
