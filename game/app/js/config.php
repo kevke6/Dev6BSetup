@@ -1,8 +1,8 @@
 <?php
-define("__HOST__", "sql8.freemysqlhosting.net");
-define("__USER__", "sql8151931");
-define("__PASS__", "ypfcP6RuwQ");
-define("__BASE__", "sql8151931");
+define("__HOST__", "sql11.freemysqlhosting.net");
+define("__USER__", "sql11158737");
+define("__PASS__", "ZMe77QvDZj");
+define("__BASE__", "sql11158737");
 
 class DB {
     private $con = false;
