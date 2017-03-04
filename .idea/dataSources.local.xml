@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="sql8151931@sql8.freemysqlhosting.net" uuid="1a036860-662d-419e-a624-cb19d2e7b804">
-      <database-info product="MySQL" version="5.5.49-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+    <data-source name="sql11158737@sql11.freemysqlhosting.net" uuid="ef8bb632-4dc9-4ea4-9239-a7c9fb4e1dd1">
+      <database-info product="MySQL" version="5.5.53-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <user-name>sql8151931</user-name>
-      <resolve-scope>sql8151931:</resolve-scope>
+      <user-name>sql11158737</user-name>
+      <resolve-scope>sql11158737:</resolve-scope>
     </data-source>
   </component>
 </project>

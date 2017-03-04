@@ -27,11 +27,11 @@ describe('MController', function() {
                 Def: 10,
                 LVL: 1,
                 EXP: 0,
-                Stamina: 10
+                Stamina: 0
             }];
             $scope.user = user;
-            $scope.updateData($mission);
-            expect($scope.test).toEqual("Succes");
+            succes = $scope.checkMissionSucces($mission);
+            expect(succes).toEqual("No Stamina");
         });
         /*it('Returns User afther get request', function () {
             var $scope = {};
